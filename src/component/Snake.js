@@ -1,16 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SnakeMouth from "./SnakeMouth";
 
 const Snake = (props) => {
-    const [snakeData, setSnakeData] = useState(props.item); 
-
     const dataRope = (data) => {
         console.log('dataRope', data);
-        // setSnakeData((prevData)=>{
-        //     return {
-        //         ...prevData, event
-        //     }
-        // });
+        props.item.push(data);
+        console.log(props.item);
     };
 
     return (

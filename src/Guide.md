@@ -22,3 +22,10 @@ Issues
     * 해결: onChange={(event)=>handlerFunction(event, ...values)}
 * json 의 key 들을 '외부 배열[인덱스]'로 설정하는 방법은?
     * 아직 못 찾음.
+    * 일반 변수로 받아서 삽입.
+* useState 로 선언한 변수는 세터를 쓴 직후에 로그를 찍어보면 업데이트가 안 돼 있다.
+    * 원인&해결: state 는 스냅샷처럼 작동한다. 최신 데이터를 이용하려면 일반 변수에 할당해서 사용할 수 있다.
+* 일반 변수와 스테이트 상관관계 및 운용
+    * State -> variable 변화 추적 x
+    * variable 에 변화가 있을 때마다 setState() 호출해야함.
+    * 데이터 변화 타이밍을 감지 or 데이터가 변하는 함수까지 state, setter 를 들고 가야함.(그켬...)

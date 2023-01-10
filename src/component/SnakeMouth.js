@@ -14,13 +14,14 @@ const handleSubmit = (event, props, newData, setNewData) => {
     const newId = event.target[1].value;
     const newPw = event.target[2].value;
     const newTest = event.target[3].value;
-    setNewData({
+    const buff = {
         key: newKey,
         id: newId,
         pw: newPw,
         test: newTest
-    })
-    props.dataRope(newData);
+    }
+    setNewData(buff);
+    props.dataRope(buff);
 }
 
 const handleChange = (event, item) => {
