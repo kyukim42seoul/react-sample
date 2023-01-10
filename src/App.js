@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactSample from './component/ReactSample.js'
+import Pinocchio from './component/Pinocchio.js';
+import Kirby from './component/Kirby.js';
+import Snake from './component/Snake.js';
+import './App.css'
+
 
 function App() {
+  const infos = [
+    {
+      key: 1,
+      id: 'kyukim',
+      pw:  'aaa',
+      test: 'test'
+    },
+    {
+      key: 2,
+      id: 'inshin',
+      pw: 'bbb'
+    },
+    {
+      key: 3,
+      id: 'junselee',
+      pw: 'ccc'
+    }
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>App.js It's root</h2>
+      <ReactSample />
+      <Pinocchio data={infos}></Pinocchio>
+      <Kirby item={infos}></Kirby>
+      <Snake item={infos}></Snake>
     </div>
   );
 }
