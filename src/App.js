@@ -30,7 +30,7 @@ function App() {
       <ReactSample />
       <Pinocchio data={infos}></Pinocchio>
       <Kirby item={infos}></Kirby>
-      <Snake item={infos}></Snake>
+      <Snake></Snake>
     </div>
   );
 }
